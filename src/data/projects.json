@@ -1,0 +1,74 @@
+[
+    {
+        "projectName": "Samsung PRISM Hackathon",
+        "projectDescription": "Developed an algorithm for converting text/chat into some meaningful text, using sentimental analysis, for users who need assistive technology.",
+        "projectTools": ["Python", "Colab" ,"Flask"],
+        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
+        "projectLink": "",
+        "projectType": 2
+    },
+    {
+        "projectName": "Video Traffic Analysis",
+        "projectDescription": "Classification of Internet video traffic into 3 categories : Video-Conferencing, Subscription based, Non-Subscription based videos and finding the best ML model.",
+        "projectTools": ["Python", "Colab", "Stacking"],
+        "projectRepo": "https://github.com/AbhishekPragada/Internet-Video-traffic-analysis-using-Stacking-ensemble.git",
+        "projectLink": "",
+        "projectType": 2
+    },
+    {
+        "projectName": "Doctor.AI",
+        "projectDescription": "This project is made from ",
+        "projectTools": ["HTML", "CSS", "JS"],
+        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
+        "projectLink": "https://doctor-ai-api.herokuapp.com/",
+        "projectType": 1
+    },
+    {
+        "projectName": "Doctor.AI",
+        "projectDescription": "This project is made from ",
+        "projectTools": ["Python", "Flask", "HTML", "CSS"],
+        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
+        "projectLink": "https://doctor-ai-api.herokuapp.com/",
+        "projectType": 1
+    },
+    {
+        "projectName": "Doctor.AI",
+        "projectDescription": "This project is made from ",
+        "projectTools": ["Python", "Flask", "HTML", "CSS"],
+        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
+        "projectLink": "https://doctor-ai-api.herokuapp.com/",
+        "projectType": 1
+    },
+    {
+        "projectName": "Doctor.AI",
+        "projectDescription": "This project is made from ",
+        "projectTools": ["Python", "Flask", "HTML", "CSS"],
+        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
+        "projectLink": "https://doctor-ai-api.herokuapp.com/",
+        "projectType": 1
+    },
+    {
+        "projectName": "Doctor.AI",
+        "projectDescription": "This project is made from ",
+        "projectTools": ["Python", "Flask", "HTML", "CSS"],
+        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
+        "projectLink": "https://doctor-ai-api.herokuapp.com/",
+        "projectType": 1
+    },
+    {
+        "projectName": "Doctor.AI",
+        "projectDescription": "This project is made from ",
+        "projectTools": ["Python", "Flask", "HTML", "CSS"],
+        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
+        "projectLink": "https://doctor-ai-api.herokuapp.com/",
+        "projectType": 1
+    },
+    {
+        "projectName": "Doctor.AI",
+        "projectDescription": "This project is made from ",
+        "projectTools": ["Python", "Flask", "HTML", "CSS"],
+        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
+        "projectLink": "https://doctor-ai-api.herokuapp.com/",
+        "projectType": 1
+    }
+]
