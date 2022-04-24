@@ -1,8 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProjectCard = (props) => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="project-card">
+    <div className="project-card" data-aos={"slide-up"}>
       <div className="project-card-content">
         <div className="project-card-header">{props.projectName}</div>
         <div className="project-card-description">

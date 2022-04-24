@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FeaturedProject = (props) => {
   const featuredProjects = [
     {
       projectName: "Doctor.AI",
-      projectDescription: "This research focuses on various disease diagnosis data and elucidates and explains how the predictions are made in order to create trustworthiness while using AI systems in healthcare using tools like LIME and FairML. Focusing more on the data i.e. reducing the bias in the features and comparing our approach with other ML feature importance algorithms like to provide the best set of features without bias at the end.This is an end to end deployed",
+      projectDescription: "This project focuses on various disease diagnosis data and elucidates how the predictions are made in order to create trustworthiness while using AI systems, using tools like LIME and FairML.",
       projectImage: "https://github.com/AbhishekPragada/Doctor.AI/blob/master/drAI.gif?raw=true",
       projectTools: ["Python", "Flask", "HTML", "CSS"],
       projectRepo: "https://github.com/AbhishekPragada/Doctor.AI.git",
@@ -19,7 +21,7 @@ const FeaturedProject = (props) => {
     },
     {
       projectName: "Weather Report",
-      projectDescription: "This shows the weather of a particular place when entered",
+      projectDescription: "It is a web application which shows the temperature of a location when entered. It uses the OpenWeatherMap API to get the temperature. Many other features can also be added according to the user requirements.",
       projectImage: "https://github.com/AbhishekPragada/Weather-WEB/blob/master/wt.gif?raw=true",
       projectTools: ["HTML", "CSS", "JS", "Node.js"],
       projectRepo: "https://github.com/AbhishekPragada/Weather-WEB.git",
@@ -39,6 +41,13 @@ const FeaturedProject = (props) => {
     color2: "#8892b0",
   });
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+    AOS.refresh();
+  }, []);
+
   return featuredProjects.map((project, index) => {
     return (
       <div className="fp" style={project.direction}>
@@ -54,7 +63,7 @@ const FeaturedProject = (props) => {
             <span className="fp-head-featured">Featured Project</span>
             <span className="fp-head-content">{project.projectName}</span>
           </div>
-          <div className="fp-description" style={project.descDirection}>
+          <div className="fp-description" style={project.descDirection} data-aos={"zoom-out-right"}>
             <span className="fp-description-content">
               {project.projectDescription}
             </span>

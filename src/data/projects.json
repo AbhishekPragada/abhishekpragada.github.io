@@ -16,59 +16,27 @@
         "projectType": 2
     },
     {
-        "projectName": "Doctor.AI",
-        "projectDescription": "This project is made from ",
+        "projectName": "Trecker",
+        "projectDescription": "A web app that lets user to mark their daily running/cycling distance on a map and also lets user to see their daily running/cycling distance in a graph.",
+        "projectTools": [ "HTML", "CSS", "JS", "Firebase"],
+        "projectRepo": "",
+        "projectLink": "",
+        "projectType": 1
+    },
+    {
+        "projectName": "Cutlery",
+        "projectDescription": "This is a website where users can find loads of food items to make also they can vary the quantity of items according to number of people",
+        "projectTools": [ "HTML", "CSS", "JS"],
+        "projectRepo": "",
+        "projectLink": "",
+        "projectType": 1
+    },
+    {
+        "projectName": "Basic JS Projects",
+        "projectDescription": "These are a cluster of basic JS projects like dice-roller, drum-kit-tool, number game, to-do list, calculator and pig game. These are made using basic vanilla JS ",
         "projectTools": ["HTML", "CSS", "JS"],
-        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
-        "projectLink": "https://doctor-ai-api.herokuapp.com/",
-        "projectType": 1
-    },
-    {
-        "projectName": "Doctor.AI",
-        "projectDescription": "This project is made from ",
-        "projectTools": ["Python", "Flask", "HTML", "CSS"],
-        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
-        "projectLink": "https://doctor-ai-api.herokuapp.com/",
-        "projectType": 1
-    },
-    {
-        "projectName": "Doctor.AI",
-        "projectDescription": "This project is made from ",
-        "projectTools": ["Python", "Flask", "HTML", "CSS"],
-        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
-        "projectLink": "https://doctor-ai-api.herokuapp.com/",
-        "projectType": 1
-    },
-    {
-        "projectName": "Doctor.AI",
-        "projectDescription": "This project is made from ",
-        "projectTools": ["Python", "Flask", "HTML", "CSS"],
-        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
-        "projectLink": "https://doctor-ai-api.herokuapp.com/",
-        "projectType": 1
-    },
-    {
-        "projectName": "Doctor.AI",
-        "projectDescription": "This project is made from ",
-        "projectTools": ["Python", "Flask", "HTML", "CSS"],
-        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
-        "projectLink": "https://doctor-ai-api.herokuapp.com/",
-        "projectType": 1
-    },
-    {
-        "projectName": "Doctor.AI",
-        "projectDescription": "This project is made from ",
-        "projectTools": ["Python", "Flask", "HTML", "CSS"],
-        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
-        "projectLink": "https://doctor-ai-api.herokuapp.com/",
-        "projectType": 1
-    },
-    {
-        "projectName": "Doctor.AI",
-        "projectDescription": "This project is made from ",
-        "projectTools": ["Python", "Flask", "HTML", "CSS"],
-        "projectRepo": "https://github.com/AbhishekPragada/Doctor.AI.git",
-        "projectLink": "https://doctor-ai-api.herokuapp.com/",
+        "projectRepo": "",
+        "projectLink": "",
         "projectType": 1
     }
 ]

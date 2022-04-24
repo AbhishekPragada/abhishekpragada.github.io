@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FeaturedProject from "./FeaturedProject";
 import ProjectCard from "./ProjectCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import projectdata from "../../data/projects.json";
 
@@ -14,9 +16,14 @@ function Project() {
     }
   });
 
+  useEffect(() => {
+    AOS.init({once: true});
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="project">
-      <div className="project-head">Projects</div>
+    <div className="project" id="projects">
+      <div className="project-head" data-aos={"fade-down"} data-aos-duration={"1000"}>Projects</div>
       <div className="project-content">
         <div className="project-featured">
           <FeaturedProject />
@@ -27,19 +34,19 @@ function Project() {
               className={tab === 0 ? "active" : ""}
               onClick={() => tabChange(0)}
             >
-              All
+              <span>All</span>
             </button>
             <button
               className={tab === 1 ? "active" : ""}
               onClick={() => tabChange(1)}
             >
-              Web Development
+               <span>Web Development</span>
             </button>
             <button
               className={tab === 2 ? "active" : ""}
               onClick={() => tabChange(2)}
             >
-              ML/AI
+               <span>ML/AI</span>
             </button>
           </div>
           <div className="project-tab-content-1">

@@ -74,6 +74,7 @@
       display: flex;
       font-family: "Libre BarCode 39 Text";
       font-size: 30px;
+      cursor: pointer;
       justify-content: space-around;
       width: 10%;
       left: 120px;
@@ -109,7 +110,7 @@
           }
           span {
             padding: 0 5px;
-            color: var(--primary-color);
+            // color: var(--primary-color);
             font-family: "Oxygen";
             font-weight: 500;
             letter-spacing: 1.5px;
@@ -118,18 +119,24 @@
           }
         }
       }
-      .abc{
+      .navbar-button{
         transform: translateY(-7px);
         button{
           padding: 5px;
           border-radius: 4px;
           border: 1px var(--primary-color) solid;
-          background-color: transparent;
+          background-color: var(--primary-color);
           transition: all 0.4s ease-in-out;
+          &:focus{
+            outline: none;
+          }
+        }
+        a{
+          text-decoration: none;
         }
         span {
           padding: 0 5px;
-          color: var(--primary-color);
+          color: var(--lightest-slate);
           font-family: "Oxygen";
           font-weight: 500;
           letter-spacing: 1.5px;
@@ -142,6 +149,9 @@
             background-color: var(--primary-color);
             cursor: pointer;
             transition: all 0.4s ease-in-out;
+          }
+          a{
+            text-decoration: none;
           }
           span{
             color: var(--lightest-slate);
@@ -223,6 +233,12 @@
     font-size: 42px;
   }
 
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .about-content {
     max-width: 1000px;
     display: grid;
@@ -301,7 +317,7 @@
       justify-content: center;
       button{
         border: none;
-        style: none;
+        text-decoration: none;
         margin: 0px 30px;
         background-color: transparent;
         color: var(--lightest-slate);
@@ -310,6 +326,9 @@
         &:hover{
           cursor: pointer;
           color: var(--green);
+        }
+        &:focus{
+          outline: none;
         }
       }
       .active{
@@ -488,7 +507,7 @@
 
 .contact-me{
   background-color: var(--navy);
-  padding: 3% 9% 1%;
+  padding: 3% 9% 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -507,6 +526,7 @@
       font-size: 14px;
     }
     .contact-button{
+      margin-top: 15px;
       padding: 10px;
       cursor: pointer;
       background-color: transparent;
@@ -514,10 +534,17 @@
       color: var(--green);
       border-radius: 4px;
       transition: 0.5s all ease-in;
+
+      a{
+        text-decoration: none;
+        color: var(--green);
+      }
+      a:visited{
+        color: var(--green);
+      }
     }
     .contact-button:hover{
-      background-color: #1d5246;
-      transform: translateY(-5px);
+      background-color: #013327;
     }
   }
 }
@@ -577,5 +604,26 @@
         font-size: 12px !important;
       }
     }
+  }
+}
+
+[data-aos="example-anim2"] {
+  transition-property: color;
+  &.aos-animate {
+    color: var(--slate);
+  }
+}
+
+[data-aos="example-anim3"] {
+  transition-property: color;
+  &.aos-animate {
+    color: var(--slate);
+  }
+}
+
+[data-aos="example-anim4"] {
+  transition-property: color;
+  &.aos-animate {
+    color: var(--slate);
   }
 }

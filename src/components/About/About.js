@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Progress from "./Progress";
 import hi from "../../image.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function About() {
   const about = {
@@ -37,9 +39,14 @@ function About() {
     },
   ];
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="about">
-      <div className="about-head">About Me</div>
+    <div className="about" id="about-me">
+      <div className="about-head" data-aos={"fade-down"} data-aos-duration={"1000"} data-aos-once={true}>About Me</div>
       <div className="about-content">
         <div className="about-cards">
           <div className="card-description">
@@ -54,9 +61,6 @@ function About() {
               Although being a student of Electronics, my interests are
               profoundly bound to software and web development areas.
             </p>
-            <p></p>
-            <p></p>
-            <p></p>
           </div>
 
           <div className="about-skills">
@@ -73,7 +77,7 @@ function About() {
           
         </div>
         <div className="about-image">
-          <img src={hi} height="100%" width="100%" />
+          <img src={hi} height="90%" width="100%" />
         </div>
       </div>
     </div>
