@@ -9,16 +9,16 @@ function About() {
     image: "abhishek",
     name: "Abhishek Pragada",
     description:
-      "I'm a full stack developer currently pursuing my B.Tech in Electronics and Communication Engineering from IIT Naya Raipur and working at Digite as a full stack intern",
+      "I am currently working as a SDE at Digite. At the company I mainly work on a product management tool called Nimble, my role would be in helping to add new enhancements and features. Also I have completed my graduation at IIIT Naya Raipur in Electronics and Communication Engineering.",
   };
 
   const skills = [
     {
-      skillName: "HTML+CSS",
+      skillName: "JS",
       skillPercent: "80%",
     },
     {
-      skillName: "JS",
+      skillName: "React",
       skillPercent: "80%",
     },
     {
@@ -26,8 +26,8 @@ function About() {
       skillPercent: "60%",
     },
     {
-      skillName: "React",
-      skillPercent: "70%",
+      skillName: "HTML+CSS",
+      skillPercent: "80%",
     },
     {
       skillName: "Node",
@@ -51,11 +51,9 @@ function About() {
         <div className="about-cards">
           <div className="card-description">
             <p>
-              Hi, My name is Abhishek Pragada. I am currently pursuing my
-              undergrad in Electronics and Communications Engineering at IIIT
-              Naya Raipur. Also, as of now I am operating as a full stack intern
-              at Digite. I like to bring my ideas to life by brainstorming and
-              ideating them during implementation
+              Hi, My name is Abhishek Pragada. I am currently working as a SDE at Digite. At the company I mainly work on a product management tool called Nimble,
+              my role would be in helping the team in addition of new enhancements and features. Also I have completed my graduation at IIIT Naya Raipur in Electronics and Communication Engineering. 
+              I like to bring my ideas to life by brainstorming and ideating them during implementation
             </p>
             <p>
               Although being a student of Electronics, my interests are
