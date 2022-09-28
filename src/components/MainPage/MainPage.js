@@ -20,7 +20,7 @@ const pages = [
 function MainPage() {
 
   useEffect(() => {
-    AOS.init({once: false});
+    AOS.init();
     AOS.refresh();
   }, []);
 

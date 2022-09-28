@@ -15,7 +15,7 @@ function Footer(){
                 <h1 data-aos={"fade-down"} data-aos-duration={"1000"}>Contact Me</h1>
                 <div className="contact-content">
                     <p>
-                        Although I am working as of now I am open to other offers <br/>and happy to help with any queries
+                    Although I’m not currently looking for any new opportunities, my inbox is<br/>always open. Whether you have a question or just want to say hi, I’ll try my <br/>best to get back to you!
                     </p>
                     <p class="contact-mail">Reach me : abhi.venkata54@gmail.com</p>
                     <button className="contact-button" data-aos={"zoom-in"} data-aos-duration={"1000"}>

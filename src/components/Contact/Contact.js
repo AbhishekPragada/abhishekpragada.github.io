@@ -16,6 +16,7 @@ export default function Contact() {
   }, []);
 
   return (
+    <React.Fragment>
     <div
       className="contact-bar"
       data-aos={"fade-zoom-in"}
@@ -240,5 +241,6 @@ export default function Contact() {
         </li>
       </ul>
     </div>
+    </React.Fragment>
   );
 }

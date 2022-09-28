@@ -28,7 +28,8 @@ const ProjectCard = (props) => {
             })}
           </ul>
         </div>
-        <div className="project-card-links">
+        {props.projectRepo ? 
+          <div className="project-card-links">
           <a href={props.projectRepo} target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +61,7 @@ const ProjectCard = (props) => {
               </g>
             </svg>
           </a>
-        </div>
+        </div> : <div></div>}
       </div>
     </div>
   );
