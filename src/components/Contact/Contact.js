@@ -74,7 +74,7 @@ export default function Contact() {
           <a
             className="contact-a"
             href="https://www.instagram.com/abhishek_130101/"
-            targte="_blank"
+            target="_blank"
             onMouseEnter={() => {
               setIconColor((prevalue) => {
                 return { ...prevalue, color2: "#64ffda" };

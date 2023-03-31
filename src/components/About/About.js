@@ -9,7 +9,7 @@ function About() {
     image: "abhishek",
     name: "Abhishek Pragada",
     description:
-      "I am currently working as a SDE at Digite. At the company I mainly work on a product management tool called Nimble, my role would be in helping to add new enhancements and features. Also I have completed my graduation at IIIT Naya Raipur in Electronics and Communication Engineering.",
+      "I am currently working as a SDE at Nimble Work (formerly known as Digite). At the company I mainly work on a product management tool called Nimble, my role would be in helping to add new enhancements and features. I have completed my graduation at IIIT Naya Raipur in Electronics and Communication Engineering.",
   };
 
   const skills = [
