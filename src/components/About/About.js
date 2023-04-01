@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import Progress from "./Progress";
-import hi from "../../image.jpg";
+import avatar from "../../avatar.jpeg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -15,7 +15,7 @@ function About() {
   const skills = [
     {
       skillName: "JS",
-      skillPercent: "80%",
+      skillPercent: "85%",
     },
     {
       skillName: "React",
@@ -27,15 +27,15 @@ function About() {
     },
     {
       skillName: "HTML+CSS",
-      skillPercent: "80%",
+      skillPercent: "90%",
     },
     {
-      skillName: "Node",
-      skillPercent: "70%",
+      skillName: "SQL",
+      skillPercent: "55%",
     },
     {
-      skillName: "Mongo DB",
-      skillPercent: "50%",
+      skillName: "Type Script",
+      skillPercent: "65%",
     },
   ];
 
@@ -51,13 +51,11 @@ function About() {
         <div className="about-cards">
           <div className="card-description">
             <p>
-              Hi, My name is Abhishek Pragada. I am currently working as a SDE at Digite. At the company I mainly work on a product management tool called Nimble,
-              my role would be in helping the team in addition of new enhancements and features. Also I have completed my graduation at IIIT Naya Raipur in Electronics and Communication Engineering. 
-              I like to bring my ideas to life by brainstorming and ideating them during implementation
-            </p>
-            <p>
-              Although being a student of Electronics, my interests are
-              profoundly bound to software and web development areas.
+              Hi, My name is Abhishek Pragada. I am currently working as a SDE at Nimble Work (formerly knows as Digite) and a graduate from IIIT Naya Raipur. I specialize in creating beautiful and functional user interfaces that provide an exceptional user experience.
+              I have a deep understanding of front end technologies and have worked a bit on backend.
+              <p>I am constantly learning and staying up-to-date with the latest advancements in the industry. I have 
+              worked on a wide range of projects, from small websites to large-scale web applications. I am excited about the future of front end development and am always looking for new challenges and opportunities to learn and grow.
+              </p>
             </p>
           </div>
 
@@ -75,7 +73,7 @@ function About() {
           
         </div>
         <div className="about-image">
-          <img src={hi} height="90%" width="100%" />
+          <img src={avatar} height="300px" width="400px" />
         </div>
       </div>
     </div>
