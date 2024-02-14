@@ -1,17 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.7cf20006.css",
-    "main.js": "/static/js/main.6530fe79.js",
+    "main.css": "/static/css/main.b4bb952d.css",
+    "main.js": "/static/js/main.3c75e02d.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
-    "static/media/bg4flip.jpg": "/static/media/bg4flip.615e7d1fc8196b5488df.jpg",
+    "static/media/Avatar.jpg": "/static/media/Avatar.b2e938cd68342bddcdea.jpg",
     "static/media/avatar.jpeg": "/static/media/avatar.141beb2274b4fabcc8ac.jpeg",
+    "static/media/Clay_White0001.png": "/static/media/Clay_White0001.e96b009817f19c48d044.png",
+    "static/media/Glass_Prism0004.png": "/static/media/Glass_Prism0004.15765d9e2afd14506e51.png",
+    "static/media/Glass_Prism0001.png": "/static/media/Glass_Prism0001.c04d70d4067a28d64886.png",
+    "static/media/Glass_Prism0034.png": "/static/media/Glass_Prism0034.cecb133e6b9229b7b4c9.png",
+    "static/media/logoDark.png": "/static/media/logoDark.aba312fff3b7f0f24e55.png",
+    "static/media/logoLight.png": "/static/media/logoLight.e8d1efbe28c9b651f0a1.png",
     "index.html": "/index.html",
-    "main.7cf20006.css.map": "/static/css/main.7cf20006.css.map",
-    "main.6530fe79.js.map": "/static/js/main.6530fe79.js.map",
+    "main.b4bb952d.css.map": "/static/css/main.b4bb952d.css.map",
+    "main.3c75e02d.js.map": "/static/js/main.3c75e02d.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cf20006.css",
-    "static/js/main.6530fe79.js"
+    "static/css/main.b4bb952d.css",
+    "static/js/main.3c75e02d.js"
   ]
 }
