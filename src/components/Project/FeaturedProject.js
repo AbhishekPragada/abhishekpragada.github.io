@@ -60,7 +60,9 @@ const FeaturedProject = (props) => {
         </div>
         <div className="fp-content">
           <div className="fp-head" style={project.headDirection}>
+            <div className="fp-tag-featured">
             <span className="fp-head-featured">Featured Project</span>
+            </div>
             <span className="fp-head-content">{project.projectName}</span>
           </div>
           <div className="fp-description" style={project.descDirection} data-aos={"zoom-out-right"}>
@@ -81,16 +83,6 @@ const FeaturedProject = (props) => {
                 <a
                   href={project.Repo}
                   target="_blank"
-                  onMouseEnter={() => {
-                    setIconColor((prevalue) => {
-                      return { ...prevalue, color1: "#64ffda" };
-                    });
-                  }}
-                  onMouseLeave={() => {
-                    setIconColor((prevalue) => {
-                      return { ...prevalue, color1: "#8892b0" };
-                    });
-                  }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -127,16 +119,6 @@ const FeaturedProject = (props) => {
                 <a
                   href={project.projectLink}
                   target="_blank"
-                  onMouseEnter={() => {
-                    setIconColor((prevalue) => {
-                      return { ...prevalue, color2: "#64ffda" };
-                    });
-                  }}
-                  onMouseLeave={() => {
-                    setIconColor((prevalue) => {
-                      return { ...prevalue, color2: "#8892b0" };
-                    });
-                  }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

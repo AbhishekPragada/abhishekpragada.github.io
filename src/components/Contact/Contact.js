@@ -166,7 +166,7 @@ export default function Contact() {
         </li>
         <li class="contact-item">
           <a
-            className="contact-a"
+            className="contact-a contact-twitter"
             href="https://twitter.com/APragada"
             target="_blank"
             onMouseEnter={() => {
