@@ -12,7 +12,7 @@ const Navbar = () => {
     const pages = [
         {
         pageName: "About",
-        pageLink: "about-me",
+        pageLink: "mainpage",
         },{
         pageName: "Projects",
         pageLink: "projects",
@@ -34,7 +34,7 @@ const Navbar = () => {
     }
  
     return(
-        <div className="navbar" data-aos={"example-anim2"} data-aos-anchor={"#about-me"} data-aos-anchor-placement={"top-top"}>
+        <div className="navbar" data-aos={"example-anim2"} data-aos-anchor={"#mainpage"} data-aos-anchor-placement={"top-top"}>
         <div className="navbar-logo" data-aos={"fade-down"} data-aos-duration={"1500"}>
           <Link
           activeClass="active"
@@ -43,7 +43,7 @@ const Navbar = () => {
           smooth={true}
           duration={1000}
           >
-            <img src={logoLight}></img>
+            <img src={isDarkMode ? logoDark : logoLight}></img>
           </Link>
         </div>
         <div className="navbar-items">
@@ -57,9 +57,9 @@ const Navbar = () => {
               to={page.pageLink}
               spy={true}
               smooth={true}
-              duration={300}
+              duration={800}
               >
-                <a data-aos={"example-anim3"} data-aos-anchor={`#${page.pageLink}`} data-aos-anchor-placement={"top-top"}>{page.pageName}</a>
+                <a data-aos-anchor={`#${page.pageLink}`} data-aos-anchor-placement={"top-top"}>{page.pageName}</a>
               </Link>
             }
               </button>

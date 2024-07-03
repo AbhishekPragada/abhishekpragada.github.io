@@ -79,9 +79,9 @@
   align-items: center;
   justify-content: space-between;
   height: 65px;
-  width: 75vw;
+  width: 65%;
   top: 20px;
-  left: calc((100% - 75vw)/2);
+  left: calc((100% - 65%)/2);
   border: 2px solid rgba(125,125,125,.17);
   border-radius: 32px;
   z-index: 30;
@@ -265,6 +265,7 @@
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='rgb(63,117,255)' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
     border-radius: 8px;
     color: var(--primary-text-color);
+    z-index: 21;
 
     .mainpage-image{
       height: 75px;
@@ -447,7 +448,6 @@
 
 .about {
   background-color: var(--primary-color);
-  // height: 100vw;
   padding: 3% 9%;
   display: flex;
   flex-direction: column;
@@ -943,3 +943,97 @@
   }
 }
 
+
+// --------------------- phone ------------------------
+
+@media (max-width: 414px) {
+  .navbar{
+    justify-content: space-between;
+    width: 80%;
+    left: calc((100% - 80%)/2);
+    .navbar-logo{
+      padding-left: 0px;
+    }
+    .navbar-items{
+      width: auto;
+      gap: 4px;
+      .navbar-item{
+        font-size: 13px;
+      }
+    }
+  }
+  .main-content {
+    max-width: 100%;
+    overflow-x: hidden;
+    .contact-bar{
+      
+    }
+    .mainpage{
+      justify-content: flex-start;
+      align-items: center;
+      &::before{
+        transform: rotateX(90deg);
+        left: -40%;
+        background-size: 60%; 
+      }
+      .mainpage-header{
+        padding-left: 0%;
+        font-size: 32px !important;
+        position: relative;
+        top: calc((100% - 60%)/2);
+        .mainpage-header-moving{
+          font-size: 32px !important;
+        }
+      }
+      .mainpage-body{
+        font-size: 16px !important;
+        top: calc((100% - 10%)/2);
+        right: auto;
+        width: 80%;
+        line-height: 0.77cm;
+      }
+    }
+  }
+  .project{
+    padding: 3% 6%;
+    .project-head{
+      font-size: 34px;
+    }
+    .project-content{
+      max-width: none;
+      margin: initial;
+      .project-featured{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .fp{
+          max-width: 412px;
+          margin: 25px 0px 0px 0px;
+          .fp-image{
+            width: 80%;
+          }
+          .fp-content{
+            .fp-head{
+              transform: translateX(-10%);
+            }
+            .fp-description{
+
+            }
+          }
+        }
+      }
+      .project-other{
+        .project-tab{
+          padding: 25px 0px 0px 0px;
+          button{
+            margin: 0px 15px;
+          }
+        }
+        .project-tab-grid{
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}

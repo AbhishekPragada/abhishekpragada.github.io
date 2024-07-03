@@ -31,8 +31,8 @@ function MainPage() {
         <div className="mainpage-image">
         </div>
         <span>
-          I am a full stack developer, currently working at 
-          <a className="mainpage-body-link" href="https://www.nimblework.com/"> NimbleWork</a>.
+          I am a full stack developer, currently working at&nbsp;
+          <a className="mainpage-body-link" href="https://www.nimblework.com/" target="_blank">NimbleWork</a>.
           <br/> Crafting web solutions that blend front-end finesse with back-end expertise for exceptional user experiences.
         </span>
       </div>
