@@ -6,9 +6,9 @@ const FeaturedProject = (props) => {
   const featuredProjects = [
     {
       projectName: "DistributedFlow",
-      projectDescription: "Built a distributed task scheduler supporting DAG-based workflows with retry mechanisms, parallel execution, and automatic failure recovery for complex data pipelines. Implemented event-driven architecture using Kafka for task queuing with exactly-once semantics, dead letter queues, and configurable retry policies handling 10K+ scheduled tasks daily. Designed worker pool with Redis-based distributed locking for concurrent task execution across multiple nodes, achieving horizontal scalability and preventing duplicate processing.",
+      projectDescription: "A distributed task scheduler supporting DAG-based workflows with retry mechanisms, parallel execution, and automatic failure recovery. Built with event-driven architecture using Kafka for task queuing and Redis-based distributed locking for horizontal scalability.",
       projectImage: "https://via.placeholder.com/600x300/64ffda/0a192f?text=DistributedFlow",
-      projectTools: ["Spring Boot", "Kafka", "Redis", "PostgreSQL", "WebSocket", "React"],
+      projectTools: ["SpringBoot", "Kafka", "Redis", "PostgreSQL", "WebSocket", "React"],
       projectRepo: "https://github.com/AbhishekPragada/DistributedFlow",
       projectLink: "",
       direction: { flexDirection: "row" },
@@ -21,9 +21,9 @@ const FeaturedProject = (props) => {
     },
     {
       projectName: "CoinTrail",
-      projectDescription: "Architected a scalable expense tracker with modular microservice design, handling personal, group, and subscription-based expenses. Implemented role-based auth with Firebase and integrated RazorPay premium subscriptions with secure webhook handling. Developed recurring transaction engine using Spring Scheduler, ensuring fault tolerance and high availability. Built analytics dashboard with Recharts; designed modern UI with Tailwind CSS featuring dark/light mode for better UX.",
+      projectDescription: "A scalable expense tracker with microservice architecture handling personal, group, and subscription-based expenses. Features Firebase auth, RazorPay integration, and analytics dashboard with Recharts.",
       projectImage: "https://via.placeholder.com/600x300/64ffda/0a192f?text=CoinTrail",
-      projectTools: ["React", "Spring Boot", "MongoDB", "Docker", "RazorPay"],
+      projectTools: ["React", "SpringBoot", "MongoDB", "Docker", "RazorPay"],
       projectRepo: "https://github.com/AbhishekPragada/CoinTrail",
       projectLink: "",
       direction: { flexDirection: "row-reverse" },
