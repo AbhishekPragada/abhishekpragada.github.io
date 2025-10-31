@@ -83,6 +83,7 @@ const FeaturedProject = (props) => {
                 <a
                   href={project.projectRepo}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -94,18 +95,18 @@ const FeaturedProject = (props) => {
                   >
                     <g
                       fill="none"
-                      fill-rule="nonzero"
+                      fillRule="nonzero"
                       stroke="none"
-                      stroke-width="1"
-                      stroke-linecap="butt"
-                      stroke-linejoin="miter"
-                      stroke-miterlimit="10"
-                      stroke-dasharray=""
-                      stroke-dashoffset="0"
-                      font-family="none"
-                      font-weight="none"
-                      font-size="none"
-                      text-anchor="none"
+                      strokeWidth="1"
+                      strokeLinecap="butt"
+                      strokeLinejoin="miter"
+                      strokeMiterlimit="10"
+                      strokeDasharray=""
+                      strokeDashoffset="0"
+                      fontFamily="none"
+                      fontWeight="none"
+                      fontSize="none"
+                      textAnchor="none"
                     >
                       <path d="M0,172v-172h172v172z" fill="none"></path>
                       <g fill={iconColor.color1}>
@@ -115,10 +116,12 @@ const FeaturedProject = (props) => {
                   </svg>
                 </a>
               </li>
+              {project.projectLink && (
               <li style={project.toolLIMargin}>
                 <a
                   href={project.projectLink}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -130,18 +133,18 @@ const FeaturedProject = (props) => {
                   >
                     <g
                       fill="none"
-                      fill-rule="nonzero"
+                      fillRule="nonzero"
                       stroke="none"
-                      stroke-width="1"
-                      stroke-linecap="butt"
-                      stroke-linejoin="miter"
-                      stroke-miterlimit="10"
-                      stroke-dasharray=""
-                      stroke-dashoffset="0"
-                      font-family="none"
-                      font-weight="none"
-                      font-size="none"
-                      text-anchor="none"
+                      strokeWidth="1"
+                      strokeLinecap="butt"
+                      strokeLinejoin="miter"
+                      strokeMiterlimit="10"
+                      strokeDasharray=""
+                      strokeDashoffset="0"
+                      fontFamily="none"
+                      fontWeight="none"
+                      fontSize="none"
+                      textAnchor="none"
                     >
                       <path d="M0,172v-172h172v172z" fill="none"></path>
                       <g fill={iconColor.color2}>
@@ -151,6 +154,7 @@ const FeaturedProject = (props) => {
                   </svg>
                 </a>
               </li>
+              )}
             </ul>
           </div>
         </div>
