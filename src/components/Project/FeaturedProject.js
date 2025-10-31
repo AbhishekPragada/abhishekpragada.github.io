@@ -5,12 +5,12 @@ import "aos/dist/aos.css";
 const FeaturedProject = (props) => {
   const featuredProjects = [
     {
-      projectName: "Doctor.AI",
-      projectDescription: "This project focuses on various disease diagnosis data and elucidates how the predictions are made in order to create trustworthiness while using AI systems, using tools like LIME and FairML.",
-      projectImage: "https://github.com/AbhishekPragada/Doctor.AI/blob/master/drAI.gif?raw=true",
-      projectTools: ["Python", "Flask", "HTML", "CSS"],
-      projectRepo: "https://github.com/AbhishekPragada/Doctor.AI.git",
-      projectLink: "https://doctor-ai-api.herokuapp.com/",
+      projectName: "DistributedFlow",
+      projectDescription: "Built a distributed task scheduler supporting DAG-based workflows with retry mechanisms, parallel execution, and automatic failure recovery for complex data pipelines. Implemented event-driven architecture using Kafka for task queuing with exactly-once semantics, dead letter queues, and configurable retry policies handling 10K+ scheduled tasks daily. Designed worker pool with Redis-based distributed locking for concurrent task execution across multiple nodes, achieving horizontal scalability and preventing duplicate processing.",
+      projectImage: "https://via.placeholder.com/600x300/64ffda/0a192f?text=DistributedFlow",
+      projectTools: ["Spring Boot", "Kafka", "Redis", "PostgreSQL", "WebSocket", "React"],
+      projectRepo: "https://github.com/AbhishekPragada/DistributedFlow",
+      projectLink: "",
       direction: { flexDirection: "row" },
       headDirection: { alignItems: "flex-end" },
       descDirection: { transform: "translateX(-10%)" },
@@ -20,12 +20,12 @@ const FeaturedProject = (props) => {
       linkLIMargin: { margin: "0 0 0 50px" },
     },
     {
-      projectName: "Weather Report",
-      projectDescription: "It is a web application which shows the temperature of a location when entered. It uses the OpenWeatherMap API to get the temperature. Many other features can also be added according to the user requirements.",
-      projectImage: "https://github.com/AbhishekPragada/Weather-WEB/blob/master/wt.gif?raw=true",
-      projectTools: ["HTML", "CSS", "JS", "Node.js"],
-      projectRepo: "https://github.com/AbhishekPragada/Weather-WEB.git",
-      projectLink: "https://weatherreportjs.herokuapp.com/",
+      projectName: "CoinTrail",
+      projectDescription: "Architected a scalable expense tracker with modular microservice design, handling personal, group, and subscription-based expenses. Implemented role-based auth with Firebase and integrated RazorPay premium subscriptions with secure webhook handling. Developed recurring transaction engine using Spring Scheduler, ensuring fault tolerance and high availability. Built analytics dashboard with Recharts; designed modern UI with Tailwind CSS featuring dark/light mode for better UX.",
+      projectImage: "https://via.placeholder.com/600x300/64ffda/0a192f?text=CoinTrail",
+      projectTools: ["React", "Spring Boot", "MongoDB", "Docker", "RazorPay"],
+      projectRepo: "https://github.com/AbhishekPragada/CoinTrail",
+      projectLink: "",
       direction: { flexDirection: "row-reverse" },
       headDirection: { alignItems: "flex-start" },
       descDirection: { transform: "translateX(10%)" },
@@ -81,7 +81,7 @@ const FeaturedProject = (props) => {
             <ul style={project.linkDirection}>
               <li style={project.toolLIMargin}>
                 <a
-                  href={project.Repo}
+                  href={project.projectRepo}
                   target="_blank"
                 >
                   <svg
