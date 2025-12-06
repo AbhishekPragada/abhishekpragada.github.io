@@ -73,7 +73,7 @@ export default function Contact() {
         <li className="contact-item">
           <a
             className="contact-a"
-            href="https://www.instagram.com/abhishek_130101/"
+            href="https://www.instagram.com/abhishek_pragada/"
             target="_blank"
             onMouseEnter={() => {
               setIconColor((prevalue) => {
@@ -120,7 +120,7 @@ export default function Contact() {
         <li className="contact-item">
           <a
             className="contact-a"
-            href="https://www.linkedin.com/in/abhishek-pragada/"
+            href="https://www.linkedin.com/in/abhishekpragada/"
             target="_blank"
             onMouseEnter={() => {
               setIconColor((prevalue) => {
@@ -167,7 +167,7 @@ export default function Contact() {
         <li class="contact-item">
           <a
             className="contact-a contact-twitter"
-            href="https://twitter.com/APragada"
+            href="https://x.com/APragada"
             target="_blank"
             onMouseEnter={() => {
               setIconColor((prevalue) => {

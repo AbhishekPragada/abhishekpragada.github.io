@@ -1,8 +1,11 @@
 :root{
   --primary-color: rgb(255, 255, 255);
   --secondary-color: black;
-  --teritary-color: #4f46e5;
-  --teritary-hover-color: #4338ca;
+  // --teritary-color: #4f46e5;
+  // --teritary-hover-color: #4338ca;
+  --teritary-color: #3f75ff;
+  --teritary-hover-color: #3365e4;
+  --teritary-gradient-color: #d4e0ff;
   --other-color: rgb(243, 243, 243);
   --light-navy: #f4f5f6;
   --transparent: rgba(255,255,255,0.8);
@@ -38,6 +41,7 @@
 :root.dark-mode {
   --primary-color:  rgb(3,6,32); //rgb(10,25,47);
   --secondary-color: rgb(40, 66, 86);
+  --teritary-gradient-color: #115948;
   --teritary-color: #64ffda;
   --teritary-hover-color: #56d4b7;
   --transparent: rgba(10,25,47,0.8);
@@ -377,14 +381,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     list-style: none;
-    -webkit-box-align: center;
     margin: 0px;
-    padding: 0px;
+    padding: 0px 0px 20px 0px;
+    gap: 8px;
 
     .contact-item {
       height: 45px;
       width: 40px;
+      display: flex;
       transition: all 0.2s ease-in-out;
 
       &:hover {
@@ -426,10 +432,10 @@
   .contact-list::after {
     content: "";
     display: block;
-    width: 1px;
-    height: 90px;
+    width: 2px;
+    height: 120px;
     margin: 0px auto;
-    background-color: var(--teritary-color);
+    background: linear-gradient(to bottom, var(--teritary-color), var(--teritary-gradient-color));
   }
 }
 
