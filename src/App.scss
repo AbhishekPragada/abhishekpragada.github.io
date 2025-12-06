@@ -8,6 +8,7 @@
   --transparent: rgba(255,255,255,0.8);
   --primary-text-color: black;
   --secondary-text-color: black;
+  --border-color: #e1e1e2;
   --button-text-color: white;
 
   --fz-xxs: 12px;
@@ -52,6 +53,7 @@
   --white: #e6f1ff;
   --other-color: rgb(2, 4, 20);
   --button-text-color: black;
+  --border-color: #2b3342;
 }
 
 *{
@@ -286,12 +288,12 @@
     color: var(--primary-text-color);
     z-index: 21;
     @media (min-width: 768px) {
-      font-size: 22px;
+      font-size: 20px;
     }
 
     .mainpage-image{
-      height: 75px;
-      width: 75px;
+      height: 70px;
+      width: 70px;
       border-radius: 50%;
       position: absolute;
       top: -37.5px;
@@ -768,10 +770,12 @@
 
 .contact-me{
   background-color: var(--other-color);
-  padding: 30px 0px 20px 0px;
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 10px;
   padding-left: 8%;
+  padding-right: 8%;
 
   color: var(--primary-text-color);
 
@@ -791,6 +795,7 @@
     }
     .contact-button{
       width: fit-content;
+      margin-top: 10px;
       padding: 8px 16px;
       border-radius: 32px;
       background-color: var(--teritary-color);
@@ -811,16 +816,32 @@
         }
       }
     }
+    .footer-title{
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .footer-span{
+      font-size: 16px;
+      font-weight: 300;
+    }
   }
+}
+// -------------------------------- Footer Divider  --------------------------------
+.footer-divider{
+  border: 1px solid var(--border-color);
+  height: 1px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .footer{
   background-color: var(--other-color);
   color: var(--primary-text-color);
-  text-align: right;
-  padding-right: 8%;
-  padding-bottom: 10px;
+  text-align: left;
   font-size: 12px;
+  padding-bottom: 10px;
 }
 
 @media only screen and (max-device-width: 600px){
@@ -1040,7 +1061,7 @@
         top: calc((100% - 10%)/2);
         right: auto;
         @media (min-width: 768px) {
-          font-size: 22px !important;
+          font-size: 20px !important;
         }
         width: 80%;
         line-height: 0.77cm;
