@@ -18,7 +18,7 @@ const Navbar = () => {
         pageLink: "projects",
         },{
         pageName: "Blogs",
-        pageLink: "/blogs"
+        pageLink: "https://medium.com/@abhi.venkata54"
         }, {
         pageName: "Resume",
         pageLink: "https://drive.google.com/file/d/1Eby66Lhw9Kc6YkPsEM7xnqyR06iM6O76/view?usp=sharing"
@@ -51,7 +51,7 @@ const Navbar = () => {
             <div className="navbar-item" key={page.pageLink}>
               <button className={`navitem-${page.pageName}`} data-aos={"zoom-in"} data-aos-easing={"ease-in-sine"} data-aos-duration={"1500"}>
               {(page.pageName === "Blogs" || page.pageName === "Resume") ? 
-              <a href={page.pageLink}>{page.pageName}</a> 
+              <a href={page.pageLink} target="_blank" rel="noreferrer">{page.pageName}</a> 
               :  <Link
               activeClass="active"
               to={page.pageLink}
