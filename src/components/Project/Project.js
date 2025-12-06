@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import FeaturedProject from "./FeaturedProject";
 import ProjectCard from "./ProjectCard";
+import { Github } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -8,6 +10,7 @@ import projectdata from "../../data/projects.json";
 
 function Project() {
   const [tab, tabChange] = useState(0);
+  const isDark = useSelector((state) => state.isDarkMode);
   const projecttabdata = projectdata.filter((prj) => {
     if (tab === 0) {
       return prj;
@@ -21,54 +24,258 @@ function Project() {
     AOS.refresh();
   }, []);
 
+  // Sync Redux state with document class
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark-mode');
+    } else {
+      document.documentElement.classList.remove('dark-mode');
+    }
+  }, [isDark]);
+
   return (
-    <div className="project" id="projects">
-      <div className="project-head" data-aos={"fade-down"} data-aos-duration={"1000"}>Projects</div>
-      <div className="project-content">
-        <div className="project-featured">
-          <FeaturedProject />
-        </div>
-        <div className="project-other">
-          <div className="project-tab">
+    <section 
+      className={isDark ? "bg-[#070918] text-slate-200" : "bg-gray-50 text-slate-900"} 
+      id="projects"
+      style={isDark ? { backgroundColor: '#070918' } : { backgroundColor: '#f9fafb' }}
+    >
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-10">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Projects</h2>
+          {/* Desktop tab buttons */}
+          {/* <nav className="hidden md:flex gap-6 items-center">
             <button
-              className={tab === 0 ? "active" : ""}
               onClick={() => tabChange(0)}
+              className={`relative text-sm font-medium pb-1 transition-colors ${
+                tab === 0
+                  ? isDark
+                    ? "text-teal-300"
+                    : "text-indigo-600"
+                  : isDark
+                  ? "text-slate-400 hover:text-slate-300"
+                  : "text-slate-500"
+              }`}
             >
-              <span>All</span>
+              All
+              {tab === 0 && (
+                <span
+                  className={`block h-0.5 w-8 rounded mt-2 ${
+                    isDark ? "bg-teal-300" : "bg-indigo-600"
+                  }`}
+                />
+              )}
             </button>
             <button
-              className={tab === 1 ? "active" : ""}
               onClick={() => tabChange(1)}
+              className={`relative text-sm font-medium pb-1 transition-colors ${
+                tab === 1
+                  ? isDark
+                    ? "text-teal-300"
+                    : "text-indigo-600"
+                  : isDark
+                  ? "text-slate-400 hover:text-slate-300"
+                  : "text-slate-500"
+              }`}
             >
-               <span>Web Development</span>
+              Web Development
+              {tab === 1 && (
+                <span
+                  className={`block h-0.5 w-8 rounded mt-2 ${
+                    isDark ? "bg-teal-300" : "bg-indigo-600"
+                  }`}
+                />
+              )}
             </button>
             <button
-              className={tab === 2 ? "active" : ""}
               onClick={() => tabChange(2)}
+              className={`relative text-sm font-medium pb-1 transition-colors ${
+                tab === 2
+                  ? isDark
+                    ? "text-teal-300"
+                    : "text-indigo-600"
+                  : isDark
+                  ? "text-slate-400 hover:text-slate-300"
+                  : "text-slate-500"
+              }`}
             >
-               <span>ML/AI</span>
+              ML/AI
+              {tab === 2 && (
+                <span
+                  className={`block h-0.5 w-8 rounded mt-2 ${
+                    isDark ? "bg-teal-300" : "bg-indigo-600"
+                  }`}
+                />
+              )}
             </button>
+          </nav> */}
+        </div>
+
+        {/* Mobile tab buttons */}
+        <div className="md:hidden mb-6 flex gap-3 overflow-x-auto pb-2">
+          <button
+            onClick={() => tabChange(0)}
+            className={`whitespace-nowrap px-4 py-2 rounded-full text-sm transition-colors ${
+              tab === 0
+                ? isDark
+                  ? "bg-gradient-to-r from-teal-500/30 to-cyan-400/10 text-teal-200"
+                  : "bg-indigo-100 text-indigo-600"
+                : isDark
+                ? "bg-slate-800/20 text-slate-400"
+                : "bg-slate-100 text-slate-600"
+            }`}
+          >
+            All
+          </button>
+          <button
+            onClick={() => tabChange(1)}
+            className={`whitespace-nowrap px-4 py-2 rounded-full text-sm transition-colors ${
+              tab === 1
+                ? isDark
+                  ? "bg-gradient-to-r from-teal-500/30 to-cyan-400/10 text-teal-200"
+                  : "bg-indigo-100 text-indigo-600"
+                : isDark
+                ? "bg-slate-800/20 text-slate-400"
+                : "bg-slate-100 text-slate-600"
+            }`}
+          >
+            Web Development
+          </button>
+          <button
+            onClick={() => tabChange(2)}
+            className={`whitespace-nowrap px-4 py-2 rounded-full text-sm transition-colors ${
+              tab === 2
+                ? isDark
+                  ? "bg-gradient-to-r from-teal-500/30 to-cyan-400/10 text-teal-200"
+                  : "bg-indigo-100 text-indigo-600"
+                : isDark
+                ? "bg-slate-800/20 text-slate-400"
+                : "bg-slate-100 text-slate-600"
+            }`}
+          >
+            ML/AI
+          </button>
+        </div>
+
+        <div className="project-content">
+          <div className="project-featured">
+            <FeaturedProject isDark={isDark} />
           </div>
-          <div className="project-tab-content-1">
-            <ul className="project-tab-grid">
-              {projecttabdata.map((prj) => {
-                return (
-                  <li>
+          <div className="project-other">
+            <div className="project-tab-content-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {projecttabdata.map((prj, index) => {
+                  return (
                     <ProjectCard
+                      key={index}
                       projectName={prj.projectName}
                       projectDescription={prj.projectDescription}
                       projectTools={prj.projectTools}
-                      projectRepo = {prj.projectRepo}
+                      projectRepo={prj.projectRepo}
+                      projectLink={prj.projectLink}
+                      isDark={isDark}
                     />
-                  </li>
-                );
-              })}
-            </ul>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-          <div className="project-tab-content-2"></div>
         </div>
+
+        {/* Empty state */}
+        {projecttabdata.length === 0 && (
+          <div
+            className={`mt-12 text-center ${
+              isDark ? "text-slate-400" : "text-slate-500"
+            }`}
+          >
+            No projects found for <strong>{tab === 0 ? "All" : tab === 1 ? "Web Development" : "ML/AI"}</strong>.
+          </div>
+        )}
+
+        {/* Footer */}
+        {/* <footer className={`mt-20 ${isDark ? "bg-transparent" : "bg-white"} p-0`}>
+          <div
+            className={`mt-12 rounded-2xl ${
+              isDark ? "bg-slate-900/20" : "bg-gray-50"
+            } p-8 md:p-12 border ${
+              isDark ? "border-slate-800/30" : "border-slate-100"
+            }`}
+          >
+            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              <div>
+                <h4 className="text-lg font-semibold">LET'S BUILD SOMETHING TOGETHER</h4>
+                <p className={`mt-2 ${isDark ? "text-slate-300" : "text-slate-600"}`}>
+                  abhi.venkata54@gmail.com
+                </p>
+              </div>
+              <div className="flex flex-col items-start md:items-center">
+                <p
+                  className={`text-sm ${
+                    isDark ? "text-slate-300" : "text-slate-600"
+                  }`}
+                >
+                  Interested in collaboration or hiring? I usually respond within 48
+                  hours.
+                </p>
+                <div className="mt-4">
+                  <a
+                    href="mailto:abhi.venkata54@gmail.com"
+                    className="inline-block px-5 py-2 rounded-full bg-indigo-600 text-white shadow hover:shadow-md transition-shadow"
+                  >
+                    Get In Touch
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center justify-end gap-4">
+                <a
+                  href="#"
+                  className={`${
+                    isDark
+                      ? "p-2 rounded-full bg-slate-800/40"
+                      : "p-2 rounded-full bg-white shadow-sm border"
+                  }`}
+                >
+                  <Github size={18} />
+                </a>
+                <a
+                  href="#"
+                  className={`${
+                    isDark
+                      ? "p-2 rounded-full bg-slate-800/40"
+                      : "p-2 rounded-full bg-white shadow-sm border"
+                  }`}
+                >
+                  in
+                </a>
+                <a
+                  href="#"
+                  className={`${
+                    isDark
+                      ? "p-2 rounded-full bg-slate-800/40"
+                      : "p-2 rounded-full bg-white shadow-sm border"
+                  }`}
+                >
+                  tw
+                </a>
+              </div>
+            </div>
+            <div
+              className={`max-w-7xl mx-auto px-6 mt-8 border-t pt-6 ${
+                isDark ? "border-slate-100/10" : "border-slate-200"
+              } flex items-center justify-between`}
+            >
+              <span className={isDark ? "text-slate-500" : "text-slate-500"}>
+                © Abhishek Pragada
+              </span>
+              <div className={`text-sm ${isDark ? "text-slate-400" : "text-slate-500"}`}>
+                Built with React • Hosted on GitHub Pages
+              </div>
+            </div>
+          </div>
+        </footer> */}
       </div>
-    </div>
+    </section>
   );
 }
 
