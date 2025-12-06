@@ -1,13 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
+import BlurImage from "./BlurImage";
+import coinTrailLight from "../../image/coinTrail-light.png";
+import coinTrailDark from "../../image/coinTrail-dark.png";
 
 const FeaturedProject = ({ isDark = true }) => {
-  const featuredProjects = [
+  const getFeaturedProjects = () => [
     {
       projectName: "DistributedFlow",
       projectDescription: "A distributed task scheduler supporting DAG-based workflows with retry mechanisms, parallel execution, and automatic failure recovery. Built with event-driven architecture using Kafka for task queuing and Redis-based distributed locking for horizontal scalability.",
-      projectImage: "https://via.placeholder.com/600x300/64ffda/0a192f?text=DistributedFlow",
+      projectImageLight: coinTrailLight,
+      projectImageDark: coinTrailDark,
       projectTools: ["SpringBoot", "Kafka", "Redis", "PostgreSQL", "WebSocket", "React"],
       projectRepo: "https://github.com/AbhishekPragada/DistributedFlow",
       projectLink: "https://distributedflow.netlify.app/",
@@ -16,7 +20,8 @@ const FeaturedProject = ({ isDark = true }) => {
     {
       projectName: "CoinTrail",
       projectDescription: "A scalable expense tracker with microservice architecture handling personal, group, and subscription-based expenses. Features Firebase auth, RazorPay integration, and analytics dashboard with Recharts.",
-      projectImage: "https://via.placeholder.com/600x300/64ffda/0a192f?text=CoinTrail",
+      projectImageLight: coinTrailLight,
+      projectImageDark: coinTrailDark,
       projectTools: ["React", "SpringBoot", "MongoDB", "Docker", "RazorPay"],
       projectRepo: "https://github.com/AbhishekPragada/CoinTrail",
       projectLink: "https://cointrail.vercel.app/",
@@ -32,10 +37,13 @@ const FeaturedProject = ({ isDark = true }) => {
     ? "text-xs px-3 py-1 rounded-full bg-slate-700/30 text-slate-200"
     : "text-xs px-3 py-1 rounded-full bg-slate-50 text-slate-700";
 
+  const featuredProjects = getFeaturedProjects();
+
   return (
     <div className="flex flex-col gap-10 mb-12">
       {featuredProjects.map((project, idx) => {
         const imageOnLeft = idx % 2 === 0; // alternate image position
+        const projectImage = isDark ? project.projectImageDark : project.projectImageLight;
 
         return (
           <motion.article
@@ -44,26 +52,17 @@ const FeaturedProject = ({ isDark = true }) => {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ y: -6 }}
-            className={cardClasses}
+            className={`${cardClasses} group`}
           >
             <div className={`grid grid-cols-1 lg:grid-cols-12 gap-6 items-center`}>
               {/* image column */}
               <div className={`lg:col-span-6 ${imageOnLeft ? 'lg:order-1' : 'lg:order-2'} w-full`}>
-                {project.projectImage ? (
-                  <div
-                    className={`rounded-xl overflow-hidden h-56 md:h-64 lg:h-48 ${
-                      isDark
-                        ? "bg-slate-900/40"
-                        : "bg-gradient-to-br from-indigo-50 to-white"
-                    }`}
-                  >
-                    <img
-                      src={project.projectImage}
-                      alt={`${project.projectName} screenshot`}
-                      loading="lazy"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {projectImage ? (
+                  <BlurImage
+                    src={projectImage}
+                    alt={`${project.projectName} screenshot`}
+                    isDark={isDark}
+                  />
                 ) : (
                   <div
                     className={`rounded-xl h-56 md:h-64 lg:h-48 flex items-center justify-center ${
