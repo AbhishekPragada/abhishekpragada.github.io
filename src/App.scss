@@ -13,6 +13,7 @@
   --secondary-text-color: black;
   --border-color: #e1e1e2;
   --button-text-color: white;
+  --featured-project-color: #e8eefd;
 
   --fz-xxs: 12px;
   --fz-xs: 13px;
@@ -615,6 +616,11 @@
 }
 
 // -------------------------------- Featured-Project  --------------------------------
+
+.bg-featured-project-color{
+  background-color: var(--featured-project-color);
+  color: var(--teritary-color);
+}
 
 .fp {
   max-width: 1000px;

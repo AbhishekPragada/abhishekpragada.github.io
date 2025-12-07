@@ -83,7 +83,7 @@ const FeaturedProject = ({ isDark = true }) => {
                     className={`text-xs px-3 py-1 rounded-full ${
                       isDark
                         ? "bg-teal-300/10 text-teal-200"
-                        : "bg-indigo-50 text-indigo-600"
+                        : "bg-featured-project-color text-primary-color"
                     }`}
                   >
                     Featured Project
