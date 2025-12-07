@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.806b19da.css",
-    "main.js": "/static/js/main.98a33f56.js",
-    "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
+    "main.css": "/static/css/main.78cc2ca6.css",
+    "main.js": "/static/js/main.95430b30.js",
+    "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
     "static/media/Avatar.jpg": "/static/media/Avatar.b2e938cd68342bddcdea.jpg",
+    "static/media/coinTrail-light.png": "/static/media/coinTrail-light.e222d94dc2d6d981a37e.png",
+    "static/media/coinTrail-dark.png": "/static/media/coinTrail-dark.a0a323b87e2a56fc8cc4.png",
+    "static/media/distributedFlow-light.png": "/static/media/distributedFlow-light.f4e92a35fcb51796dcdb.png",
+    "static/media/distributedFlow-dark.png": "/static/media/distributedFlow-dark.59148f3a60ba0b23605d.png",
     "static/media/avatar.jpeg": "/static/media/avatar.141beb2274b4fabcc8ac.jpeg",
     "static/media/Clay_White0001.png": "/static/media/Clay_White0001.e96b009817f19c48d044.png",
     "static/media/Glass_Prism0004.png": "/static/media/Glass_Prism0004.15765d9e2afd14506e51.png",
@@ -12,12 +16,12 @@
     "static/media/logoDark.png": "/static/media/logoDark.aba312fff3b7f0f24e55.png",
     "static/media/logoLight.png": "/static/media/logoLight.e8d1efbe28c9b651f0a1.png",
     "index.html": "/index.html",
-    "main.806b19da.css.map": "/static/css/main.806b19da.css.map",
-    "main.98a33f56.js.map": "/static/js/main.98a33f56.js.map",
-    "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
+    "main.78cc2ca6.css.map": "/static/css/main.78cc2ca6.css.map",
+    "main.95430b30.js.map": "/static/js/main.95430b30.js.map",
+    "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.806b19da.css",
-    "static/js/main.98a33f56.js"
+    "static/css/main.78cc2ca6.css",
+    "static/js/main.95430b30.js"
   ]
 }
