@@ -21,7 +21,7 @@ const Navbar = () => {
         pageLink: "https://medium.com/@abhi.venkata54"
         }, {
         pageName: "Resume",
-        pageLink: "https://drive.google.com/file/d/1Eby66Lhw9Kc6YkPsEM7xnqyR06iM6O76/view?usp=sharing"
+        pageLink: "https://drive.google.com/file/d/1CDP_Ze2ctK408Wlpg5ANtP16dj_N06Oe/view?usp=sharing"
         }
     ];
 
