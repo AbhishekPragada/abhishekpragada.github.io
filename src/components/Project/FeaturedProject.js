@@ -4,14 +4,16 @@ import { Github, ExternalLink } from "lucide-react";
 import BlurImage from "./BlurImage";
 import coinTrailLight from "../../image/coinTrail-light.png";
 import coinTrailDark from "../../image/coinTrail-dark.png";
+import distributedFlowLight from "../../image/distributedFlow-light.png";
+import distributedFlowDark from "../../image/distributedFlow-dark.png";
 
 const FeaturedProject = ({ isDark = true }) => {
   const getFeaturedProjects = () => [
     {
       projectName: "DistributedFlow",
       projectDescription: "A distributed task scheduler supporting DAG-based workflows with retry mechanisms, parallel execution, and automatic failure recovery. Built with event-driven architecture using Kafka for task queuing and Redis-based distributed locking for horizontal scalability.",
-      projectImageLight: coinTrailLight,
-      projectImageDark: coinTrailDark,
+      projectImageLight: distributedFlowLight,
+      projectImageDark: distributedFlowDark,
       projectTools: ["SpringBoot", "Kafka", "Redis", "PostgreSQL", "WebSocket", "React"],
       projectRepo: "https://github.com/AbhishekPragada/DistributedFlow",
       projectLink: "https://distributedflow.netlify.app/",
